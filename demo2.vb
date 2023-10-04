@@ -10,8 +10,10 @@
 
         Dim F As Double
         Dim C As Double
+        Dim input As String
         Console.Write("please enter your temperature in fahrenheit >> ")
-        F = Console.ReadLine
+        input = Console.ReadLine
+        Double.TryParse(input, F)
         C = (F - 32) * (5 / 9)
         Console.WriteLine(C.ToString("N3"))
         Console.ReadKey()
